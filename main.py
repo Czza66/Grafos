@@ -12,6 +12,7 @@ app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 # Cargar el grafo de Bogotá
 print("Cargando grafo...")
 G = ox.graph_from_place("Bogotá, Colombia", network_type='drive')
+G = ox.project_graph(G)
 
 
 @app.post("/ruta-optima")

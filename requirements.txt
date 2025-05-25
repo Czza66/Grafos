@@ -6,3 +6,4 @@ matplotlib
 folium
 pyomo
 scipy
+scikit-learn
