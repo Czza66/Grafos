@@ -11,6 +11,7 @@ app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 # Cargar grafo
 print("Cargando grafo...")
 G = ox.graph_from_place("Bogotá, Colombia", network_type="drive")
+G = ox.project_graph(G)
 
 @app.post("/ruta-optima")
 async def calcular_ruta(coordenadas: list[str]):
